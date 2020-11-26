@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 박스 구현 */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        header, .header {
+            background-color: #f1f1f1;       /*      상단부 구현    */
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        footer, .footer {
+            background-color: whitesmoke;       /*      하단부 구현    */
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        aside, section, .aside, .section {                  /* 글자 설정 */
+            float: left;
+            width: 33.3%;
+            padding: 10px;
+            height: 300px;
+        }
+
+        
+
+        .boxa {
+            background-color: #aaaaaa;
+        }
+
+        .boxb {
+            background-color: #bbbbbb;
+        }
+
+        .boxc {
+            background-color: #cccccc;
+        }
+
+        main::after, .main::after {
+            content: "";
+            display: table;                /*      footer가 안붙음 */
+            clear: both;
+        }
+
+        @media (max-width: 576px) {        /*     화면 크기를 576px 이하로 줄이면 가로로 박스가 정렬된게 세로로 박스가 정렬됨 (반응형 웹 디자인)  */
+            aside { width: 100%; }
+            section {width: 100%; }
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>float 으로 화면 꾸미기</h1>
+<!-- 헤더 부분 -->
+<header>
+    <h2>header</h2>
+</header>
+<!-- 메인 영역 -->
+<main>
+    <!-- 왼쪽 사이드바 -->
+    <aside class="boxa">좌측 사이드바</aside>
+    <!-- 메인 컨텐츠 -->
+    <section class="boxb">메인 컨텐츠</section>
+    <!-- 오른쪽 사이드바 -->
+    <aside class="boxc">우측 사이드바</aside>
+</main>
+<!-- 아래 부분 -->
+<footer>
+    <p>Footer</p>
+</footer>
+    
+</body>
+
+
+<!-- 아니면 전통적인 방법   : XHTML(HTML4)
+
+<div class="header"></div>
+<div class="main"></div>
+<div class="footer"></div>
+
+
+
+-->
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topnav</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        /* nav {
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+
+        }
+
+        nav a:hover{
+            background-color: #dddddd;
+            color: black;
+        } */
+
+        
+        nav ul {
+            /* f12를 눌러 코드의 체크부분을 풀면서 특성을 비교해보자 */
+            /* 예를들어 첫번째 줄은 ui의 기본 구문자 ( ⦁ 같은거)를 화면에서 삭제 */
+            list-style: none;
+            /* 외부 공간을 삭제하여 다른 태그와 최대한 붙어있게 표지 */
+            margin: 0px;
+            /* 컨텐츠까지의 내부공간을 삭제하여 컨텐츠 영역 내에서 공간을 설정할수 있도록 해줌  */
+            padding: 0px;
+            /* 해당 태그의 자손 태그가 해당 태그의 크기보다 클 경우 화면에 표시하는 방식. 자손태그가 흰색이니 가려라. */
+            overflow: hidden;
+            background-color: #333333;
+
+        }
+
+        nav li {
+            /* 해당 태그를 위로 띄워서 정렬하는 속성 */
+            /* display : block인 태그도 inline 속성인 것처럼 한 라인에 정렬이 가능함 (한마디로 세로 정렬이었던거 가로로 정렬시켜준다는 소리) */
+            float: left;
+        }
+
+        nav li a {
+            /* a 태그는 디스플레이 : inline이나 inline-block을 써야 padding, margin을 사용할수 있음 */
+
+            display: inline-block;           /*          블럭단위 생성      */
+            color: #f2f2f2;
+            text-align: center;              /*          글자를 중앙정렬    */
+            padding: 15px;                   /*          a태그의 외부 테두리와 컨텐츠 사이의 공간 생성. text-align: center; 와 사용하여 정중앙에 표시되는 효과가 나옴    */
+            text-decoration: none;           /*          한마디로 하이퍼링크 기본 특징인 파란글씨 밑줄을 삭제        */
+        }
+
+
+        /* a:hover를 사용하여 마우스가 해당 태그 위에 올라갔을 경우 마치 해당 태그위에 선택한 것처럼 보이는 효과 */
+        nav li a:hover{
+            background-color: #dddddd;
+            color: black;
+        }
+
+        /* li 태그가 float 속성을 사용했으므로 다른 태그에 영향이 가지 않도록 float을 clear 시켜줌.  */
+        nav::after {
+            content: "";
+            display: table;
+            clear: both;                /*     작업한 float 날리기 */
+        }
+
+
+
+        main {
+            background-color: #dddddd;
+            padding: 10px;
+            height: 300px;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+             <!--  
+
+                <a href="#">링크 1번</a>
+                <a href="#">링크 2번</a>
+                <a href="#">링크 3번</a>
+
+              --> 
+
+            <!-- ul, li 형태 -->
+            
+            <nav> 
+
+            <ul>
+                <li><a href="https://www.naver.com/">home</a></li>
+                <li><a href="http://www.11st.co.kr/plan/front/exhibitions/2047366/detail">링크1</a></li>
+                <li><a href="#">link2</a></li>
+                <li><a href="#">link3</a></li>
+            </ul>
+            
+            </nav>
+           
+          
+    </header>
+
+    <main>
+
+        <h2>Main Conterts</h2>
+        <p>메인 컨텐츠가 들어갈 자리</p>
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>
+
+
+<!-- topnav 예제에서 중앙 컨텐츠 부분에 화면을 float 사용하여 3등분하는 형태로 페이지를 만드세요
+    화면 크기는 33.3% -->

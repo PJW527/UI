@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidenav</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        .content {
+            /* 왼쪽 사이드바 영역과 겹치는 것을 방지 */
+
+            margin-left: 200px;
+            padding-left: 20px;
+
+        }
+
+        .sidemenu {
+            height: 100%;
+            width: 200px;
+            /* 최상위 태그의 시작지점(0,0)을 기준으로 화면 전체에 고정되는 방식 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* 하나의 위치에서 여러 태그가 겹쳐서 그려질 경우 화면에 표시되는 우선 순위를 표시하는 속성 */
+            z-index: 100;
+            /* 컨텐츠가 가로로 내용이 긴 경우 부모 태그의 영역을 벗어나면 화면에 출력하지 않음 */
+            overflow-x: hidden;
+            background-color: #111111;
+        }
+
+        .sidemenu ul{                   /*     왼쪽으로 붙게 만듬 */
+            margin: 8px 0px;            /*     쌍으로 주면 8px 부분은 위쪽에 여유공간을 두게 만듬 */
+            padding: 0px;         
+        }
+
+        .sidemenu a {
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+            /* 하나의 라인에 컨텐츠가 1개만 출력되어야 하기 때문에 display: block; 을 사용*/
+            display: block;
+        }
+
+        .sidemenu a:hover{
+            background-color: #dddddd;
+            color: black;
+        }
+
+        .sidemenu a:hover{                          /*      클릭하면 바뀌는 속성 */
+            background-color: brown;       
+
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="sidemenu">
+
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">링크1</a></li>
+            <li><a href="#">링크2</a></li>
+            <li><a href="#">링크3</a></li>
+        </ul>
+
+    </div>
+
+    <div class="content">
+        <h2>메인 컨텐츠</h2>
+        <p class="p1">메인 컨텐츠2</p>
+        <p class="p2">메인 컨텐츠2</p>
+        <p class="p3">메인 컨텐츠2</p>
+    </div>
+
+
+</body>
+</html>

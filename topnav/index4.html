@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagesUI</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Times, serif;
+        }
+
+        header {
+            display: block; 
+            color: white;
+            background-color: mediumturquoise;
+            padding : 30px;
+            margin : 0px;
+            height: 150px;
+            font-size: 45px;
+            text-align: left;
+            
+            
+        }
+
+
+
+        .content {
+            width: 1080px;                   /*    컨텐츠의 가로길이를 고정, 여유공간은 자동으로 */
+            margin: 0px auto;
+
+        }
+
+        .box1 {
+            display: inline;                /*    필수아님 */
+            padding : 20px;
+            margin : 20px;
+
+        }
+
+        .img-container {
+            float: left;                    /*    필수 */
+            width: 40%;
+            padding: 5px;
+
+
+        }
+
+        .img-container img {
+            display: inline-block ;             /*    필수아님 */
+            width : 100%;
+            }
+        
+
+        .box::after {
+            content: "";
+
+            clear: both;
+        }
+
+        .text {
+
+            
+            float: left;                   /*     (블록마다) 텍스트를 바로 왼쪽에 놓음 */
+            width: 60%;
+            height: 350px;                           /*     텍스트창 높이를 고정해서 창이 꼬이는걸 방지   */
+            font-family: 'Nanum Gothic';
+            font-size: large;
+            border-bottom : 2px solid lightslategrey;
+            border-right : 2px solid lightslategrey;
+            padding: 4px 16px;
+            /* 원래는 box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 가 들어감  여유공간, 굵기, 흐려짐, 여유공간, 색깔 순서*/
+        }
+
+
+
+
+        @media (max-width: 675px) {        /*     화면 크기를 675px 이하로 줄이면 가로로 박스가 정렬된게 세로로 박스가 정렬됨 (반응형 웹 디자인)  */
+            .img-container { width: 100%; }
+            .text { width: 100%; }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header> Summer Holiday</header>
+    <main>
+         <div class="content">                   <!--     컨텐츠를 새로 묶어서  -->
+            <div class="box1">                      <!--   이미지와 텍스트를 한줄 단위로 묶음 -->
+                <div class="img-container">
+                    <img src="./images/img_5terre.jpg" >
+                </div>
+                <div class="text">
+                    <h3>5 Terre</h3>
+    
+                    <p>Microsoft started manufacturing the Xbox Series X and S consoles a bit later than it would have liked</p> <hr>
+
+                    <p>Microsoft started manufacturing the new consoles in late summer while Sony started earlier, opting not to wait for AMD to finalize the design of its new GPU architecture. According to the company, “Xbox Series X|S are the only next-generation consoles with full hardware support for all the RDNA 2 capabilities”.</p>
+
+                </div>
+            </div>
+            <br><br><br>
+
+            <div class="box1">
+                <div class="img-container">
+                    <img src="./images/img_corniglia.jpg" >
+                </div>
+                <div class="text">
+                    <h3>Corniglia</h3>
+    
+    
+                    <p>Microsoft started manufacturing the Xbox Series X and S consoles a bit later than it would have liked</p> <hr>
+
+                    <p>Microsoft started manufacturing the new consoles in late summer while Sony started earlier, opting not to wait for AMD to finalize the design of its new GPU architecture. According to the company, “Xbox Series X|S are the only next-generation consoles with full hardware support for all the RDNA 2 capabilities”.</p>
+    
+
+                </div>
+            </div>
+            <br><br><br>
+
+            <div class="box1">
+                <div class="img-container">
+                    <img src="./images/img_manarola.jpg" >
+                </div>
+                <div class="text">
+                    <h3>Manarola</h3>
+    
+    
+                    <p>Microsoft started manufacturing the Xbox Series X and S consoles a bit later than it would have liked</p> <hr>
+
+                    <p>Microsoft started manufacturing the new consoles in late summer while Sony started earlier, opting not to wait for AMD to finalize the design of its new GPU architecture. According to the company, “Xbox Series X|S are the only next-generation consoles with full hardware support for all the RDNA 2 capabilities”.</p>
+    
+
+                </div>
+            </div>
+
+            <div class="box1">
+                <div class="img-container">
+                    <img src="./images/img_monterosso.jpg" >
+                </div>
+                <div class="text">
+                    <h3>Monterosso</h3>
+    
+    
+                    <p>Microsoft started manufacturing the Xbox Series X and S consoles a bit later than it would have liked</p> <hr>
+
+                    <p>Microsoft started manufacturing the new consoles in late summer while Sony started earlier, opting not to wait for AMD to finalize the design of its new GPU architecture. According to the company, “Xbox Series X|S are the only next-generation consoles with full hardware support for all the RDNA 2 capabilities”.</p>
+    
+
+                </div>
+            </div>
+
+            <div class="box1">
+                <div class="img-container">
+                    <img src="./images/img_riomaggiore.jpg" >
+                </div>
+                <div class="text">
+                    <h3>Riomaggiore</h3>
+    
+    
+                    <p>Microsoft started manufacturing the Xbox Series X and S consoles a bit later than it would have liked</p> <hr>
+
+                    <p>Microsoft started manufacturing the new consoles in late summer while Sony started earlier, opting not to wait for AMD to finalize the design of its new GPU architecture. According to the company, “Xbox Series X|S are the only next-generation consoles with full hardware support for all the RDNA 2 capabilities”.</p>
+    
+
+                </div>
+            </div>
+
+            <div class="box1">
+                <div class="img-container">
+                    <img src="./images/img_vernazza.jpg" >
+                </div>
+                <div class="text">
+                    <h3>Vernazza</h3>
+    
+    
+                    <p>Microsoft started manufacturing the Xbox Series X and S consoles a bit later than it would have liked</p> <hr>
+
+                    <p>Microsoft started manufacturing the new consoles in late summer while Sony started earlier, opting not to wait for AMD to finalize the design of its new GPU architecture. According to the company, “Xbox Series X|S are the only next-generation consoles with full hardware support for all the RDNA 2 capabilities”.</p>
+    
+
+                </div>
+            </div>
+
+            <br><br><br><br><br><br><br>
+
+ 
+
+        </div>
+
+
+        
+
+        
+    </main>
+</body>
+</html>

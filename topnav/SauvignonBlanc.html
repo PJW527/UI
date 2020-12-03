@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wite Wines - Sauvignon Blanc</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <link rel="stylesheet" href="./css/style.css">                  CSS를 여기에 빼놓음 -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;                      /* ★★★ */
+            }
+
+            header {
+                background-color: teal;
+                padding: 15px;
+                margin-bottom: 15px;                    /* 하단부만 여유공간이 생김 */
+            }
+
+            header h1 {
+                color: white;
+                font-weight: normal;                    /* 노말은 볼드 400, 명령어 볼드는 700 */
+                font-size: 35px;
+            }
+
+            header .left {
+                float: left;
+            }
+
+            header .right {
+                float: right;
+                text-align: right;                                  /* 우측 정렬용 코드 */
+            }
+
+            .fa {
+                color: white;                                   /* w3school에서 가져온 아이콘을 일정크기로 맞추는 코드 */
+                font-size: 36px;
+                margin-top: 20px;                                   /* 아이콘 하단, 넓게는 헤더와 메인간 크기를 띄우기 위한 코드 */
+            }
+
+            header::after {
+                content: "";                            /* float로 꼬이는것 방지 */
+                display: table;
+                clear: both;
+            }
+
+
+            main {
+                padding: 0px 10px;                      /* width을 크게 정하지 않고 패딩만 조금 줬다. 좌우측에 10px 공간 확보 */
+            }
+
+            section::after {
+                content: "";
+                display: table;                         /* float로 꼬이는것 방지 */
+                clear: both;
+            }
+
+            .left {
+                float: left;
+                width: 66%;                     /* ★★★ */
+                padding: 0px 10px;              /*  왼쪽 컨텐츠 영역중 좌우측의 공간 10픽셀 확보. 왼쪽은 총 20ㅠ픽셀 확보. (main 태그의 패딩과 left 패딩의 결과) */
+            }
+
+
+            div.pic, div.pic > img { width: 100%; }                         /* 이미지 사이즈 관련 중요부분 */
+                                                                     /* div.pic는 태그 선택자로 태그명이 div이면서 클래스 명이 pic인 태그를 선택 */
+
+            div.info h2 {
+                font-weight: 400;
+                margin: 16px 0px;
+            }
+
+            /* div이면서 info 태그인데다 table이 있는 태그 */
+            div.info table {
+                width: 100%;
+                border-collapse: collapse;        /* table의 각각의 column의 인접 테두리선을 하나로 합하여 줌 */
+            }
+
+            /* div에서 이름이 info 태그에 있는 th, td를 골라서 설정 */
+            div.info th, div.info td {
+                padding-left: 10px;                         /* 좌측 공간을 띄워서 보기좋게 만들어줌. 다른 여유공간은 제일 긴 요소가 알아서 잡아주는듯 */
+                border: none;                               /* 구분줄을 없애서 보기좋게 만들어줌 */
+            }
+
+            div.info th {
+                background-color: teal;
+                color: white;
+            }
+
+            div.info tr {
+                height: 50px;
+                text-align: left;
+            }
+
+
+            /* nth-child() : 주로 표 사용시 짝수 혹은 홀수별로 선택하기 위한 선택자. odd(홀수)와 even(짝수)이 있는데 여기는 짝수마다 f2f2f2 색을 넣음 */
+            div.info tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            .right {
+                float: left;
+                width: 33%;                  /* ★★★ */
+                padding: 0px 10px;          
+            }
+
+            .right > * {
+                margin: 15px 0px;
+                font-weight: 400;
+            }
+
+            .right h1 {
+                font-size: 36px;
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wite Wines - Sauvignon Blanc</h1>
+        <!--     nav : div와 동일한 태그, 네비게이션 및 메뉴바를 표시하는 태그 -->
+        <nav>
+            <a href="./indexSauvig.html"><i class="fa fa-angle-double-left  left"></i></a>     <!--      다른 파일로 넘어가기위해 w3school 아이콘을 사용 -->
+            <a href="./indexSauvig.html"><i class="fa fa-angle-double-right right"></i></a>     <!--      fa fa말고 클래스를 1개 더 생성해서 좌우 구분을 준다. -->
+        </nav>
+    </header>
+
+    <main>
+        <section>                       <!-- 컨텐츠 전체를 나타내는 메인 섹션-->
+            <div class="left">              <!-- 좌측 컨텐츠를 나타내는 섹션. 화살표로 확인 가능-->
+                <div class="pic">
+                    <img src="./images/펭수-03-web.jpg" alt="">
+                </div>
+                <div class="info">              <!-- 표 하나마다 걸리는 info div 태그-->
+                    <h2>Sauvignon Blanc</h2>
+                    <table>                                             <!--      표 생성 -->
+                        <thead>                                                 <!--      표 말머리 -->
+                            <tr>
+                                <th>Food</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>                                                 <!--      표 세부내용 -->
+                            <tr>
+                                <td>Seafood</td>
+                                <td>Fish</td>
+                            </tr>
+                            <tr>
+                                <td>Meat</td>
+                                <td>Chicken, Pork, Veal</td>
+                            </tr>
+                            <tr>
+                                <td>Cheese</td>
+                                <td>Herbed goat cheese, Nutty cheese, Gruyere</td>
+                            </tr>
+                            <tr>
+                                <td>Other</td>
+                                <td>Mexican, Vietnamese</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="info">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Age</th>
+                                <th>Flavor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Less Ripe</td>
+                                <td>Lime, Gooseberry</td>
+                            </tr>
+                            <tr>
+                                <td>Medium</td>
+                                <td>Green apple, Citrus, Passion fruit</td>
+                            </tr>
+                            <tr>
+                                <td>More Ripe</td>
+                                <td>Grapefruit, Peach, Melon</td>
+                            </tr>
+                            <tr>
+                                <td>Oaked</td>
+                                <td>Vanilla, Smoke</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="info">
+                    <h2>Neighbours</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Neighbour</th>
+                                <th>Flavour</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Vermentino</td>
+                                <td>More floral and citrus</td>
+                            </tr>
+                            <tr>
+                                <td>Gruner Veltiner</td>
+                                <td>More lime, lemon, and grapfruit</td>
+                            </tr>
+                            <tr>
+                                <td>Verdejo</td>
+                                <td>More texture and peach</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="right">                     <!--      우측 내용 전용 클래스. 왼쪽 컨텐츠에 float left로 붙음. 자세한건 css 코드 참조-->
+                <h1>Sauvignon Blanc</h1>
+                <p>Depending on the climate, the flavor can range from grass to tropical fruit.</p>
+                <p>In cooler climates, the wines have noticeable acidity and flavors of grass and passion fruit.</p>
+                <p>In warmer climates, the wines can develop over-ripeness aromas like grapefruit, peach, and melon.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

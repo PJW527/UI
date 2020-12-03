@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin : 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+
+
+        body {
+            margin-left: 0px;
+            margin-right: 0px ;        /*       헤더바 조절 */
+            width: 100%;
+        }
+
+
+        .side {
+            float: left;
+            text-decoration: none;
+            width: 16%;
+            margin-bottom:800px;
+            padding:auto;
+            overflow: visible;
+        }
+
+        .side div {
+            padding: 8px, 16px;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .side a {
+
+            text-decoration: none;
+            margin-top: 0px;
+            padding:8px 8px;
+            padding-right: 0px;
+
+            width:auto;
+            display:block;
+            outline:0;
+            color: black;
+
+        }
+
+        .side a:hover {
+            background-color: lightgray;
+        }
+
+        .input-icon {
+            float: left;
+            width: 33.33%;
+
+            display: block;
+            background-color: black;
+            text-align:center
+        }
+
+        .input-icon .fa {
+            width: 100%;
+        }
+
+        section {
+            float: left;
+            width: 84%;
+        }
+
+        section .shead {
+            color: white;
+            background-color: teal;
+            text-align: center;
+            padding: 100px;
+        }
+
+        section .css, .js {
+            background-color: rgb(231, 231, 231);
+            box-shadow:10px 10px 5px 0 rgba(0,0,0,0.16),0 10px 10px 0 rgba(0,0,0,0.12);
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        section h1 {
+            margin: 10px;
+            padding: 10px;
+            font-size: 64px;
+            font-weight: 500;
+        }
+
+        section h2 {
+            margin: 10px;
+            padding: 10px;
+            font-size: 32px;
+            font-weight: 400;
+        }
+
+        section button {
+            margin-left: 20px;
+            padding: 10px 20px;
+            background-color: teal;
+            color: white;
+            border: none;
+        }
+
+        section .button2 {
+            margin-left: 5px;
+            padding: 10px 20px;
+            background-color: teal;
+            color: white;
+            border: none;
+        }
+
+        section .code {
+            background-color: white;
+            border-left: 3px solid  teal;
+            margin: 20px;
+            padding: 10px;
+            color: red;
+            font-size: 1.1em;
+        }
+
+        section .code2 {
+            background-color: white;
+            border-left: 3px solid  teal;
+            margin: 20px;
+            padding: 10px;
+            color: black;
+            font-size: 1.1em;
+        }
+
+
+
+        main::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .side::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .input-icon::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        section::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+
+        @media (max-width: 1000px) {        /*     화면 크기를 675px 이하로 줄이면 가로로 박스가 정렬된게 세로로 박스가 정렬됨 (반응형 웹 디자인)  */
+            .side {float: inline-end;}
+            section { width: 100%; }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+    <div class="side">
+
+            <div class="upside">
+                <div class="input-icon">
+                    <a href="javascript:void(0)" style="width:100%" onclick="openNav('nav01')"><i class="fa fa-bars" style="font-size:24px;color: white;"></i></a>
+                </div>
+                <div class="input-icon">
+                    <a href="javascript:void(0)" style="width:100%" onclick="openNav('nav02')"><i class="fa fa-file" style="font-size:24px; color: white;"></i></a>
+                </div>
+                <div class="input-icon">
+                    <a href="javascript:void(0)" style="width:100%" onclick="openNav('nav02')"><i class="fa fa-camera"  style="font-size:24px;color: white;"></i></a>
+                </div>
+            
+
+                <img src="./images/w3schools.png" alt="" style="padding:10px 0px;">
+            </div>
+            <
+            <div class="listing">                <!--        java 집어넣으려다 실패한 흔적... -->
+                <div class="div01">
+                    <a href="#">Learn HTML</a>
+                    <a href="#">Learn CSS</a>
+                    <a href="#">Learn W3.CSS</a>
+                    <a href="#">Learn Colors</a>
+                    <a href="#">Learn Javascript</a>
+                    <a href="#">Learn XML</a>
+                    <a href="#">Learn SQL</a>
+                    <a href="#">Learn PHP</a>
+                    <a href="#">Learn Pengsoo</a>
+                </div>
+                
+            </div>
+
+    </div>
+    <section>
+            <div class="shead">
+                <h1>W3Schools.com</h1>
+            </div>
+                <div class="css">
+                    <h1>CSS</h1>
+                    <h2>The Language for Styling Web Pages</h2>
+                    <button type="button">LEARN CSS</button>
+                    <button type="button" class="button2">CSS REFERENCES</button>
+
+                    <div class="code">
+                        <span style="color:brown;">body</span> {<br>
+                            &nbsp;&nbsp;&nbsp; background-color: <span style="color:blue;">#d0e4fe;</span><br>}<br><span style="color:brown;">h1</span> {<br>
+                            &nbsp;&nbsp;&nbsp; color: <span style="color:blue;">orange;</span><br>
+                            &nbsp;&nbsp;&nbsp; text-align: <span style="color:blue;">center;</span><br>}<br><span style="color:brown;">p</span> {<br>
+                            &nbsp;&nbsp;&nbsp; font-family: <span style="color:blue;">&quot;Times New Roman&quot;</span>;<br>
+                            &nbsp;&nbsp;&nbsp; font-size: <span style="color:blue;">20px;</span><br>}
+                    </div>
+                    <button type="button">Try it Yourself</button>
+                </div>
+                <br>
+
+                <div class="js">
+                    <h1>JS</h1>
+                    <h2>The Language for Styling Web Pages</h2>
+                    <button type="button">LEARN CSS</button>
+                    <button type="button">CSS REFERENCES</button>
+
+                    <div class="code2">
+                        <span style="color:rgba(0, 128, 0, 0.699);">// Click the button to change the color of this paragraph</span><span style="color:brown;"></span><br><br><span style="color:blue;">function</span> myFunction() {<br>
+                            &nbsp;&nbsp;&nbsp; <span style="color:blue;">var</span> x;<br>
+                            &nbsp;&nbsp;&nbsp; x = document.getElementById(<span style="color:brown;">&quot;demo&quot;</span>);<br>
+                            &nbsp;&nbsp;&nbsp; x.style.fontSize = <span style="color:brown;">&quot;25px&quot;</span>; <br>
+                            &nbsp;&nbsp;&nbsp; x.style.color = <span style="color:brown;">&quot;red&quot;</span>; <br>}
+                    </div>
+                    <button type="button">Try it Yourself</button>
+                </div>
+        </div>
+    </section>
+
+    
+    <script>
+
+        openNav("nav01");
+        function openNav(id) {
+        document.getElementById("nav01").style.display = "none";
+        document.getElementById("nav02").style.display = "none";           //          <!--        java 집어넣으려다 실패한 흔적... -->
+        document.getElementById("nav03").style.display = "none";                
+        document.getElementById(id).style.display = "block";
+        }
+    </script>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    * {
+        box-sizing : border-box;
+    }
+
+
+    html {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .window {
+        /* ★ display:block인 태그를 (그러니까 특정 창에) width값을 주고, margin의 left와 right를 auto로 주게되면 창이 중앙정렬됨 ★ */
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    .window h1 {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    form * {
+        padding: 10px;           /*    입력창, 버튼창의 내부에 10px 여유공간 */
+        margin-bottom: 5px;     /*    입력창, 버튼창의 외부에 (아래쪽만) 10px 여유공간 */
+        font-size: 32px;
+        
+    }
+
+    .ground {
+        background-color: lightcyan;
+        padding: 15%;
+    }
+
+    form input, form button {
+        width: 100%             /* ★ 입력공간 영역 채우기 ★ */
+    }
+
+    form button {
+        border: none;
+        background-color: teal;
+        color: white;
+        text-decoration: none;
+    }
+
+    form a {
+        text-decoration: none;
+        color: white;
+        border: none;
+        
+    }
+
+    form button:hover{
+        background-color: darkgreen;
+    }
+
+
+    /* 반응형 웹(가로길이 조절)에 사용되는 속성 */
+    @media screen and (max-width: 768px) {
+        .window {
+            width: 400px;
+        }
+
+        form input, form button {
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: tomato;
+        }
+
+        form button {
+            background-color: gray;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <!-- 문제 1. 특정 사이트에 로그인하기 위한 id 및 pw입력 창을 만들고 로그인 버튼을 생성하세요 -->
+    <!-- ps. 화면의 크기에 따라 id pw창의 글자 크기가 변경됨. 768기준 32px/16px. -->
+
+    <div class="window">
+        <h1>Login</h1>
+        <form action="#" class="ground">
+            <input type="text" placeholder="ID를 입력하세요" class="id">
+            <input type="password" placeholder="비밀번호를 입력하세요" class="pw">
+            <button type="button"><a href="../topnav/pengsu.html">log in</a></button>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+
+<!-- 
+
+    반응형 웹 사용시 이미지 출력 방법
+    - 기존의 이미지 출력 방식을 사용하게 되면 반응형 웹 적용시 이미지의 크기가 고정되어 있어서 제대로 표현이 안됨
+    - width 속성 사용 : width %로 표기, height를 auto로 설정
+    - max-width 속성 사용 : width 대신 max-width를 사용하고 %로 표기. height를 auto로 설정
+
+
+
+ -->

@@ -1,0 +1,113 @@
+* {
+
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+header ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    height: 70px;
+
+    letter-spacing: 3px;              /*   글자 간격 띄우기 (오....) */
+    line-height: 2;
+
+}
+
+
+
+header li {
+    float: right;
+    text-align: center;
+    padding: 10px;
+    /* margin: 10px; */
+}
+
+header li a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+header li:hover {
+    background-color: gray;
+}
+
+header ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+main {
+    float: left;
+    width: 100%;
+}
+
+
+
+section .mainimg{
+    width: 100%;
+    margin: 0px 0px;
+}
+
+.mainimg h1 {
+    position:absolute;
+    left: 20px;
+    bottom:-30;
+    top: 900px;
+    font-size: 45px;
+    padding:12px 24px;
+    letter-spacing: 2px; 
+}
+
+
+
+/* section div .left, div.left2 {
+    float: left;
+    text-align: left;
+}
+
+section div .right, div.right2 {
+    float: right;
+    text-align: right;
+} */
+
+.left {
+    display: inline;
+    margin-left: 410px;
+    padding: 64px, 0px;
+}
+
+
+.right {
+    float: left;
+    text-align: center;
+    margin-right: 410px;
+    padding: 64px, 0px;
+}
+
+section .contact {
+    float: left;
+}
+
+main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer {
+    float: left;
+}
+
+footer::after {
+    content: "";
+    display: block;
+    clear: both;
+}

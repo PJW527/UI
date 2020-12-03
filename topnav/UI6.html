@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        header img {
+            float: left;            /*     헤더의 좌측에 위치 */
+            margin: 0px;
+            padding: 10px;
+        }
+
+        header h4 {
+            float: right;            /*     헤더의 우측에 위치 */
+            text-align: right;   
+            margin: 0px;
+            padding: 10px;
+            font-weight: 400;
+            font-size: 25px;
+            /* position: absolute;  ★ 부모태그의 시작위치를 기반으로 하여 원하는 위치에 배치가 가능함. */
+            /* bottom : 0   ,  right: 16px  등등 사용가능 */
+            letter-spacing: 5px;              /*   글자 간격 띄우기 (오....) */
+            line-height: 2;
+        }
+
+        header nav {
+
+            margin: 0px;
+            margin-bottom: 10px;
+            padding : 0px;
+            background-color: darkseagreen;
+
+            /* 네비게이션 바 공식
+            list-style-type: none;
+            overflow: hidden;
+            background-color: teal; 
+            margin-top: 8px; */
+        }
+
+        header nav a {
+
+            /* a태그의 패딩 영역과 마진 영역을 확보하기 위해  displa를 변경*/
+            display: inline-block;
+            padding: 10px 20px;               /*  ★     상단바의 영역 조절, a태그 공간확보 */
+            background-color: darkseagreen;
+            color: white;
+            font-size: 1.1em;
+
+            text-align: center;   /*   가운데정렬 */
+            
+
+
+
+        }
+
+        header a {
+
+    
+            text-decoration: none;
+            border-style: none;
+            font-weight: 500;
+           
+        }
+
+        header a:hover{
+            background-color: white;
+            color: black;
+
+        }
+
+
+        .hhead::after {
+            content: "";
+            display: block;                /*   ★   최상단의 이미지와 텍스트를 따로 묶은뒤, float 형태 뒷처리를 담당 */
+            clear: both;
+        }
+
+        body {
+            margin-left: 0px;
+            margin-right: 0px         /*    ★   헤더바 조절 */
+        }
+
+        .side {
+            float: left;
+            width: 15%;                     /*  영역조절 구간   ★ */
+            margin-bottom:300px;
+            text-decoration: none;
+        }
+
+        .side a {
+
+            text-decoration: none;
+            margin-top: 0px;
+            padding:8px 8px;  /* ★  각각 상하, 좌우값. 안쓰면 텍스트끼리 붙어버림 */
+
+            width:auto;
+            border:none;
+            display:block;     /* ★ a태그의 영역 확대를 위해 사용. 특히 hover 적용시 전체적으로 넓어지는 효과 */
+            outline:0;
+            color: black;
+        }
+
+        .side a:hover {
+            background-color: lightgray;
+        }
+
+        section {
+            float: left;
+            width: 85%;     /*  영역조절 구간   ★ */
+        }
+
+        section .css, .js {
+            background-color: rgb(231, 231, 231);
+            box-shadow:0px 0px 10px rgba(0,0,0,0.5);     /*            그림자조절 구간 */
+            /* overflow: hidden; */
+            padding: 12px 24px;
+            margin-bottom: 16px;                       /*      padding과 함께 본문 간격조절용 */
+        }
+
+        /* .css > *, .js > * {
+            margin: 8px;
+        }                                       */
+
+
+        section h1 {
+            margin: 10px;
+            padding: 10px;
+            font-size: 64px;
+            font-weight: 500;
+        }
+
+        section h2 {
+            margin: 10px;
+            padding: 10px;
+            font-size: 32px;
+            font-weight: 400;
+        }
+
+        section button {
+            margin-left: 20px;
+            padding: 10px 20px;
+            background-color: darkseagreen;
+            color: white;
+            border: none;
+        }
+
+        section .button2 {
+            margin-left: 5px;
+            padding: 10px 20px;
+            background-color: darkseagreen;
+            color: white;
+            border: none;
+        }
+
+        section button:hover {               /*            버튼에 손이 올라갔을때 */
+            color: black;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        section .code {
+            background-color: white;
+            border-left: 3px solid darkseagreen;
+            margin: 20px;
+            padding: 10px;
+            color: red;
+            font-size: 1.1em;
+        }
+
+        section .code2 {
+            background-color: white;
+            border-left: 3px solid darkseagreen;
+            margin: 20px;
+            padding: 10px;
+            color: black;
+            font-size: 1.1em;
+        }
+
+
+
+        main::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .side::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        section::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hhead">
+            <img src="./images/w3schools.png" alt="">
+            <h4>THE WORLD'S LARGEST WEB DEVELOPER SITE</h4>
+        </div>
+        <nav>
+                <a href="#">TUTORIALS</a>  
+                <a href="#">REFERENCES</a>
+        </nav>
+    </header>
+    <main>
+    <div class="side">
+        
+            <a href="#"><b>Tutorials</b></a>
+            <a href="#">Learn HTML</a>
+            <a href="#">Learn CSS</a>
+            <a href="#">Learn W3.CSS</a>
+            <a href="#">Learn Colors</a>
+            <a href="#">Learn Javascript</a>
+            <a href="#">Learn XML</a>
+            <a href="#">Learn SQL</a>
+            <a href="#">Learn PHP</a>
+            <a href="#">Learn Pengsoo</a>
+
+
+
+    </div>
+    <section>
+            <div class="css">
+            <h1>CSS</h1>
+            <h2>The Language for Styling Web Pages</h2>
+            <button type="button">LEARN CSS</button>
+            <button type="button" class="button2">CSS REFERENCES</button>
+
+            <div class="code">
+                <span style="color:brown;">body</span> {<br>
+                    &nbsp;&nbsp;&nbsp; background-color: <span style="color:blue;">#d0e4fe;</span><br>}<br><span style="color:brown;">h1</span> {<br>
+                    &nbsp;&nbsp;&nbsp; color: <span style="color:blue;">orange;</span><br>
+                    &nbsp;&nbsp;&nbsp; text-align: <span style="color:blue;">center;</span><br>}<br><span style="color:brown;">p</span> {<br>
+                    &nbsp;&nbsp;&nbsp; font-family: <span style="color:blue;">&quot;Times New Roman&quot;</span>;<br>
+                    &nbsp;&nbsp;&nbsp; font-size: <span style="color:blue;">20px;</span><br>}
+            </div>
+            <button type="button">Try it Yourself</button>
+            
+            </div><br>
+            <div class="js">
+            <h1>JS</h1>
+            <h2>The Language for Styling Web Pages</h2>
+            <button type="button">LEARN CSS</button>
+            <button type="button">CSS REFERENCES</button>
+
+            <div class="code2">
+                <span style="color:rgba(0, 128, 0, 0.699);">// Click the button to change the color of this paragraph</span><span style="color:brown;"></span><br><br><span style="color:blue;">function</span> myFunction() {<br>
+                    &nbsp;&nbsp;&nbsp; <span style="color:blue;">var</span> x;<br>
+                    &nbsp;&nbsp;&nbsp; x = document.getElementById(<span style="color:brown;">&quot;demo&quot;</span>);<br>
+                    &nbsp;&nbsp;&nbsp; x.style.fontSize = <span style="color:brown;">&quot;25px&quot;</span>; <br>
+                    &nbsp;&nbsp;&nbsp; x.style.color = <span style="color:brown;">&quot;red&quot;</span>; <br>}
+            </div>
+            <button type="button">Try it Yourself</button>
+            </div>
+    </section>
+
+    </main>
+</body>
+</html>

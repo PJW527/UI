@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui 3-1</title>
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+        }
+
+
+        head {
+            padding: 15px;
+            font-weight: normal;
+            font-size: 28px;
+            
+        }
+
+
+        .content {
+            width: 100%;                   /*    컨텐츠의 가로길이를 고정, 여유공간은 자동으로 */
+            margin: 0px auto;
+        }
+
+
+        .Basic, .Premium {
+            float: left;
+            width:32%;             /* 기본적으로  float left를 준뒤 여기서 여유공간 조절 */
+            border: 1px solid black;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+
+
+
+        .Pro {
+            float: left;
+            width:32%;          /* 기본적으로  float left를 준뒤 여기서 여유공간 조절 */
+            border: 1px solid black;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+
+
+
+
+        .Basic:hover {
+            box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+
+        .Pro:hover {
+            box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+
+        .Premium:hover {
+            box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+
+
+        #Title {
+            background-color: black;
+            color: white;
+            padding: 100px;
+            font-size: 45px;
+            width: 100%; 
+            
+        }
+
+        #listing {
+            border-bottom: 1px solid lightgray;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #price {
+            padding: 30px;
+        }
+
+        #pricebold {
+            font-size: xx-large;
+        }
+
+        #buttonplace {
+            background-color: lightgray;
+            padding: 10px;
+        }
+
+        button {
+            background-color: rgb(94, 185, 94);
+
+            padding: 20px 50px;
+            margin: 20px;
+            border: 1px solid white;
+            font-size: 1em;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white
+        }
+
+        button:hover {
+            cursor: pointer;            /*     마우스 포인터를 손가락으로 바꿈 */
+            background-color:  gray;
+            color: black;
+        }
+
+        main::after {
+            content: "";
+            display: block;              /*       왼쪽으로 이상하게 나오는거 방지 */
+            clear: both;
+        }
+        
+        @media (max-width: 750px) {        /*     화면 크기를 675px 이하로 줄이면 가로로 박스가 정렬된게 세로로 박스가 정렬됨 (반응형 웹 디자인)  */
+            .content { width: 100%; }
+            .Basic { width: 100%; }
+            .Pro { width: 100%; }
+            .Premium { width: 100%; }
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <head>
+        <h1>Resopnsive Pricing Tables</h1>
+    </head>
+
+    <main>
+        <div class="content">
+            <div class="Basic">
+                <div id="Title">Basic</div>
+                <div id="listing"><b>10GB</b> storage</div>
+                <div id="listing"><b>10</b> Emails</div>
+                <div id="listing"><b>10</b> Domains</div>
+                <div id="listing"><b>Endless</b> Support</div>
+                <div id="price"><div id="pricebold">$  1 0</div><br>per month<br> </div>
+                <div id="buttonplace"><button type="button"><a href="#">Sign up</a></button></div>
+            </div>
+
+            <div class="Pro">
+                <div id="Title" style="background-color:rgb(94, 185, 94);">Pro</div>
+                <div id="listing"><b>25GB</b> storage</div>
+                <div id="listing"><b>25</b> Emails</div>
+                <div id="listing"><b>25</b> Domains</div>
+                <div id="listing"><b>Endless</b> Support</div>
+                <div id="price"><div id="pricebold">$  2 5</div><br>per month<br> </div>
+                <div id="buttonplace"><button type="button"><a href="#">Sign up</a></button></div>
+            </div>
+
+            <div class="Premium">
+                <div id="Title">Premium</div>
+                <div id="listing"><b>50GB</b> storage</div>
+                <div id="listing"><b>50</b> Emails</div>
+                <div id="listing"><b>50</b> Domains</div>
+                <div id="listing"><b>Endless</b> Support</div>
+                <div id="price"><div id="pricebold">$  5 0</div><br>per month<br> </div>
+                <div id="buttonplace"><button type="button"><a href="#">Sign up</a></button></div>
+            </div>
+
+        </div>
+        
+    </main>
+
+</body>
+</html>

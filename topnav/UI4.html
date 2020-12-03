@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+        /* 가운데정렬은 후손태그에게 상속됨 */
+        form {text-align: center;}
+        /* big 태그는 하단 참조 */
+        form > .big {
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+            margin: 10px;
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+
+        .input-line > div {
+            float: left;
+            font-size: 32px;
+            padding: 10px;
+        }
+        /* 아이콘 영역 고정 */
+        .input-line .input-icon{
+            width: 50px;
+        }
+
+        .input-line .input-text{
+            overflow: hidden;
+            width: 96%;
+        }
+
+        .input-line i {
+            color: #2196F3;
+        }
+
+        .input-line input {
+            font-size: 24px;
+            width: 100%;
+            padding: 8px;
+            display: block;
+        }
+
+        .input-line::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        h1 {
+        color: #2196F3;
+        /* font-weight : 100~900까지, 기본값/normal/400. bold/700 */
+        font-weight: 400;
+        }
+
+        button {
+            color: white;
+            background-color: #2196F3;
+            font-size: 1.3em;
+            width: 100px;
+            height: 50px;
+            border: none;
+        }
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <form action="">
+    <!-- 전체 테두리를 감싸는 용도로 big이라는 div를 하나 더 생성 -->
+    <div class="big">
+
+        
+        <div class="title"> 
+            
+            <h2>Contact Us</h2>
+        </div>
+        <div class="input-line">
+                <!-- icon을 사용하기 위한 div, 다른 아이콘들과 동일한 너비를 가지도록 하기 위해서 크기를 고정 -->
+            
+            <div class="input-icon">
+                <i class="fa fa-user" style="color: rgb(49, 115, 190);"></i>
+            </div>
+                    <!-- 사용자 입력을 받는 input 태그를 감싸는 div, 하나의 라인 전체를 사용하는 input 태그를 만들기 위한  diiv -->
+            <div class="input-text">
+                        <!-- input의 display 속성을 block 변경, width: 100% 설정 -->
+                <input type="text" name="first" placeholder="First name">
+            </div>
+        </div>
+
+        <div class="input-line">
+                <!-- icon을 사용하기 위한 div, 다른 아이콘들과 동일한 너비를 가지도록 하기 위해서 크기를 고정 -->
+            
+            <div class="input-icon">
+                <i class="fa fa-user" style="color: rgb(49, 115, 190);"></i>
+            </div>
+                    <!-- 사용자 입력을 받는 input 태그를 감싸는 div, 하나의 라인 전체를 사용하는 input 태그를 만들기 위한  diiv -->
+            <div class="input-text">
+                        <!-- input의 display 속성을 block 변경, width: 100% 설정 -->
+                <input type="text" name="last" placeholder="Last name">
+            </div>
+        </div>
+
+        <div class="input-line">
+                <!-- icon을 사용하기 위한 div, 다른 아이콘들과 동일한 너비를 가지도록 하기 위해서 크기를 고정 -->
+            
+            <div class="input-icon">
+                <i class="fa fa-envelope" style="color: rgb(49, 115, 190);"></i>
+            </div>
+                    <!-- 사용자 입력을 받는 input 태그를 감싸는 div, 하나의 라인 전체를 사용하는 input 태그를 만들기 위한  diiv -->
+            <div class="input-text">
+                        <!-- input의 display 속성을 block 변경, width: 100% 설정 -->
+                <input type="email" name="email" placeholder="Email">
+            </div>
+        </div>
+
+
+
+        <div class="input-line">
+            <!-- icon을 사용하기 위한 div, 다른 아이콘들과 동일한 너비를 가지도록 하기 위해서 크기를 고정 -->
+        
+            <div class="input-icon">
+                <i class="fa fa-phone" style="color: rgb(49, 115, 190);"></i>
+            </div>
+                    <!-- 사용자 입력을 받는 input 태그를 감싸는 div, 하나의 라인 전체를 사용하는 input 태그를 만들기 위한  diiv -->
+            <div class="input-text">
+                        <!-- input의 display 속성을 block 변경, width: 100% 설정 -->
+                <input type="tel" name="tel" placeholder="Phone">
+            </div>
+        </div>
+
+
+        <div class="input-line">
+                <!-- icon을 사용하기 위한 div, 다른 아이콘들과 동일한 너비를 가지도록 하기 위해서 크기를 고정 -->
+            
+            <div class="input-icon">
+                <i class="fa fa-pencil" style="color: rgb(49, 115, 190);"></i>
+            </div>
+                    <!-- 사용자 입력을 받는 input 태그를 감싸는 div, 하나의 라인 전체를 사용하는 input 태그를 만들기 위한  diiv -->
+            <div class="input-text">
+                        <!-- input의 display 속성을 block 변경, width: 100% 설정 -->
+                <input type="text" name="message" placeholder="Message">
+            </div>
+        </div>
+
+        <div class="send">
+            <button>Send</button>
+        </div>
+
+    </div>
+
+
+
+
+            
+
+
+    </form>
+</body>
+</html>

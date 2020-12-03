@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<!-- 
+
+    Flexbox : 레이아웃을 구성하기 위한 모듈
+    - css3부터 지원하기 시작
+    - float 사용하지 않고 같은 형태의 화면 구성이 가능함
+    - 구형 웹브라우저에서는 안돌아감
+    Flexbox 사용
+    - flexbox는 본인이 아닌 자손태그에 flex 형태를 설정함. 참고로 float은 자신한테 설정
+    - 사용방법은 CSS style에서 display 속성을 flex로 변경해줘야함(  (.클래스이름) {   display : flex    }   )
+    Flexbox의 속성
+    - flex-direction : 자손 태그의 요소를 쌓는 방향을 설정. column(세로정렬), row(가로정렬), column-reverse(반대방향 세로정렬), row-reverse(반대방향 가로정렬)
+    - flex-wrap : 화면의 크기에 따로 자손 태그의 자동 줄바꿈 여부 설정. wrap(줄바꿈 적용), nowrap(줄바꿈 미적용), wrap-reverse(반대방향 줄바꿈)
+    - flex-flow : direction이랑 wrap 속성을 동시에 설정하는 속성. 
+    - justify-content : 자손 태그의 정렬 방식 설정 (가로 정렬). center(중앙 정렬), flex-start(왼쪽 정렬), flex-end(오른쪽 정렬), 
+                                                            space-around(양쪽 정렬, 양쪽크기에 동일한 크기 공간 확보), space-between(양쪽 정렬, 양쪽 크기에 공간 없음)
+
+    - align-items : 자손 태그의 정렬 방식 설정(세로 정렬). center(중앙 정렬), flex-start(상단 정렬), flex-end(하단 정렬), 
+                                                        stretch(상하단 정렬, 높이를 전체 다 사용), baseline(여러개의 자손 태그가 있을때 그 태그의 텍스트 기준선을 따라 정렬)
+
+    - align-content : 자손 태그가 여러줄일 경우 라인의 위치를 설정. space-between(상하단 양끝 정렬), space-around(상하단 양끝 정렬. 양끝에 공간 확보.) 
+                                                                stretch(상하단 양끝 정렬 및 모든 공간 채움), center(중앙정렬), flex-start(상단 정렬), flex-end(하단 정렬)
+
+ -->
+    <style>
+        .box {
+            width: 100px;
+            padding: 10px 0px;
+            margin: 10px;
+            text-align: center;
+            font-size: 32px;
+            background-color: lightgray;
+        }
+
+        #div01 {
+            background-color: dodgerblue;
+        }
+
+        #div02 {
+            display: flex;                  /* 이러면 이제 float: left와 뒷처리 없어도 편하게 옆으로 정렬할수 있음.  */
+            flex-wrap: wrap;              /* 'no'warp가 아닌 warp만 넣으면 창이 작아지면 자동으로 밀림. reverse는 순서바뀜*/
+            background-color: dodgerblue;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./css/flexbox1.css">
+</head>
+<body>        
+    <h3>기본값</h3>
+    <div id="div01">
+
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>                 <!--              단체로 세로정렬됨 -->
+    
+    <br><hr><br>
+    <h3>flexbox 사용</h3>
+    <div id="div02">
+        
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>                    <!--           단체로 가로정렬됨 -->
+
+
+    <br><hr><br>
+    
+    <div id="div03">
+        <h2>flex-direction</h2>
+        <br>
+        <h3>flex-direction : column</h3>                    <!-- 세로 방향 -->
+        <div class="flex-container card1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h3>flex-direction : column-reverse</h3>            <!-- 세로 역방향 -->
+        <div class="flex-container card2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h3>flex-direction : row(float: left와 비슷)</h3>
+        <div class="flex-container card3">                  <!-- 가로 방향  -->
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h3>flex-direction : row-reverse(float: right와 비슷)</h3>               <!-- 가로 역방향 + 오른쪽 정렬   -->
+        <div class="flex-container card4">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <h3>flex-wrap : wrap (화면을 줄여봅시다)</h3>
+        <div class="flex-container wrap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <h3>flex-wrap : wrap-reverse</h3>
+        <div class="flex-container wrap-reverse">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <h3>flex-wrap : nowrap</h3>
+        <div class="flex-container nowrap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+
+    <div id="div05">
+        <h3>flex-flow : row wrap (가로정렬 + 자동 줄바꿈)</h3> 
+        <div class="flex-container flex-flow">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+
+    <br><hr><br>
+    <h2>flex 정렬</h2>
+    <br><hr><br>
+
+    <div id="div06">
+        <h3>justify-content : center</h3>           <!-- 가운데 정렬 -->
+        <div class="flex-container center">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>justify-content : flex-start</h3>       <!-- 왼쪽 정렬 -->
+        <div class="flex-container flex-start">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>justify-content : flex-end</h3>         <!-- 오른쪽 정렬 -->
+        <div class="flex-container flex-end">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>justify-content : space-around</h3>     <!-- 양면 공간을 남기고 적절히 퍼짐. 모든 박스요소에 동일한 공간이 배정되면서 양끝이 띄워짐 -->
+        <div class="flex-container space-around">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>justify-content : space-between</h3>    <!-- 양면 공간 없이 적절히 퍼짐. 2개만 남기면 양 사이드에 박스가 배치된다- -->
+        <div class="flex-container space-between">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div07">
+        <h3>align-item : center</h3>                     <!--     중간 고정 -->
+        <div class="flex-container2 vertical-center">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>align-item : flex-start</h3>>                     <!--     상단 고정 -->
+        <div class="flex-container2 vertical-start">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>align-item : flex-end</h3>>                     <!--     하단 고정 -->
+        <div class="flex-container2 vertical-end">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>align-item : flex-stretch</h3>>                     <!--     상단에 배치한 다음 높이 크기만큼 쭉쭉 늘어남 -->
+        <div class="flex-container2 stretch">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>align-item : flex-baseline</h3>               <!--       중앙에 선을 그어 글이 선을 넘기지 않도록 설정하는 속성 -->
+        <div class="flex-container2 baseline">
+            <div><h1>1</h1></div>
+            <div><h6>2</h6></div>
+            <div><h4>3</h4></div>
+            <div><small>4</small></div>
+            <div><large>5</large></div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: mediumaquamarine;
+            color: white;
+            margin: 0px;
+            padding: 15px;
+
+            
+        }
+
+
+
+        a {
+            color: white;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        .box {
+            padding: 0 10px;
+
+            
+        }
+
+
+
+
+        div.box-img, div.box-img > img  {
+            float: left;
+            width: 100%;
+        }
+
+ 
+        div.card-text table {
+                width: 100%;
+                border-collapse: collapse;
+                text-align: left;
+            }
+
+            /* div 이름이 card-text인 태그 안에서 th, td를 선택 */
+            
+            div.card-text th, div.card-text td {
+                padding-left: 10px;
+                border: none;
+            }
+
+            div.card-text th {
+                background-color: teal;
+                color: white;
+            }
+
+            div.card-text tr {
+                height: 50px;
+                text-align: left;
+            }
+
+        .box-thrld {
+
+            float: left;
+            width: 66%;
+            margin: 10px;
+            padding: 0 10px;
+
+            
+        }
+
+
+        .box-thrld2 {
+
+            float: left;
+            width: 33%;
+            margin: 10px;
+            padding: 0 10px;
+            
+        }
+
+
+
+        .box::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>wite wines - sauvignnon blanc</h1>
+        <a href="#" style="text-align: left;"><span style="text-align:left;">&#171;</span></a><a href="#" style="text-align: right; text-align: right;"><span style="text-align:right">&#187;</span></a>
+    </header>
+
+    <body>
+        <div class="box">
+            <div class="box-thrld">
+                <div class="box-img">
+                    <img src="./images/1571846071617.jpg" width="1200px">
+                    <div class="card-text" >
+                    <h2>Food</h2>
+                        <table>
+                            <th style="background-color: mediumaquamarine; color: white; width: 350px;">Food</th>
+                            <th style="background-color: mediumaquamarine; color: white; width: 350px;">Type</th>
+                            <tr>
+                                <td>Seafood</td>
+                                <td>Shrimps, Crab, Fish</td>
+                            </tr>
+                            <tr>
+                                <td>Seafood</td>
+                                <td>Shrimps, Crab, Fish</td>
+                            </tr>
+                            <tr>
+                                <td>Meat</td>
+                                <td>Pork, Beef, Fish</td>
+                            </tr>
+                            <tr>
+                                <td>Drink</td>
+                                <td>Cola, Cola, ZeroCola</td>
+                            </tr>
+                            <br><br><br>
+                            <th style="background-color: mediumaquamarine; color: white; width: 30%;">Food</th>
+                            <th style="background-color: mediumaquamarine; color: white; width: 30%;">Type</th>
+                            <tr>
+                                <td>Seafood</td>
+                                <td>Shrimps, Crab, Fish</td>
+                            </tr>
+                            <tr>
+                                <td>Seafood</td>
+                                <td>Shrimps, Crab, Fish</td>
+                            </tr>
+                            <tr>
+                                <td>Meat</td>
+                                <td>Pork, Beef, Fish</td>
+                            </tr>
+                            <tr>
+                                <td>Drink</td>
+                                <td>Cola, Cola, ZeroCola</td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+
+            <div class="box-thrld2">
+                    <h2>Text Dummy 2</h2>
+                        <p>Nullam pellentesque metus arcu, sit amet imperdiet tortor placerat sed. Aenean et eleifend erat. Curabitur quis iaculis ligula. Praesent lacinia at ex ac lobortis. Phasellus aliquam lorem suscipit, mollis risus ut, pretium ante. Fusce ac enim tempus, ullamcorper massa nec, accumsan erat. Donec rhoncus leo non neque scelerisque, in facilisis nulla commodo. Nam tempus ex est, quis lacinia neque imperdiet ut. Pellentesque vitae magna lobortis, auctor mauris at, bibendum nisi. Aenean at gravida arcu, rhoncus vestibulum mi. Proin vel tincidunt orci, eget malesuada felis. Etiam mollis facilisis aliquam. Maecenas sit amet tortor sit amet arcu pharetra lacinia pulvinar ut sapien. Maecenas tempor, tellus rhoncus faucibus malesuada, lorem urna luctus augue, eu pulvinar diam tellus nec dolor. Sed imperdiet molestie imperdiet.</p>
+            </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+    </body>
+
+</body>
+</html>

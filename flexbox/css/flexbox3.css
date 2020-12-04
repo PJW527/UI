@@ -1,0 +1,39 @@
+ * {
+     box-sizing: border-box;
+ }
+
+ .left {
+     background-color: coral;
+     padding: 10px;
+     flex: 33.33%;           /*    각 요소마다 전체의 33% 영역을 배정 */
+ }
+
+ .center {
+     background-color: cornflowerblue;
+     padding: 10px;
+     flex: 33.33%;
+ }
+
+ 
+ .right {
+    background-color: lightseagreen;
+    padding: 10px;
+    flex: 33.33%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;         /*        flex에 의해 가로정렬 */
+    font-size: 30px;
+    text-align: center;
+}
+
+/* 반응형 웹 구현 공간 */
+/* not, only는 빼도 되는 속성. 걸리면 일단 all이나 screen.  */
+/* bootstrap 기준 576 768 996 1200 을 기준으로 나눔 */
+@media screen and (max-width:768px) {
+    .flex-container {
+        flex-direction: column;        /*      화면이 작아지면 세로정렬로 변경 */
+    }
+
+}

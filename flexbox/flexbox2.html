@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox2</title>
+
+    <link rel="stylesheet" href="./css/flexbox2.css">
+    
+    <!-- 
+        flex box 자식요소의 속성
+        - 플렉스 컨테이너의 직계 자손요소는 자동적으로 flex 요소가 됨
+        - 부모 태그의 css 속성에 display:flex가 들어있으면 직계 자손 태그는 자동적으로 flex 요소가 됨
+        
+        - order : flex 요소의 순서를 설정하는 속성
+        - flex-grow : flex 요소의 크기를 설정하는 속성. 다른 요소의 크기보다 몇배로 커질지를 설정. 기본값은 일단 0
+        - flex-shrink : flex 요소의 크기를 설정하는 속성. 다른 요소의 크기보다 몇배로 작아질지를 설정. 기본값은 일단 1
+        - flex-basis : flex 요소의 초기 크기를 설정
+        - flex : order, flex-grow, flex-shrink 의 속성을 한번에 설정할수 있음
+
+        - align-self : flex 사용시 flex 요소중 지정한 태그만 정렬 위치를 설정할수 있는 속성
+        - justify-content, align-content는 해당 영역의 전체적인 정렬을 지정하는 방식이지만 align-self 지정한 태그만 정렬 위치를 설정하는 방식
+     -->
+</head>
+<body>
+    <div id="div01">
+        <h3>order 미사용</h3>
+        <div class="flex-container order">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <h3>order 사용</h3>
+        <div class="flex-container order">     <!--       flex에서 order 속성을 나타낼 경우 순서를 쉽게 설정할수 있다. -->
+            <div style="order: 3">1</div>      <!--      3번째 순서로 '1'을 나타내라 -->
+            <div style="order: 2">2</div>      <!--      2번째 순서로 '2'를 나타내라 -->
+            <div style="order: 4">3</div>      <!--      4번째 순서로 '3'을 나타내라 -->
+            <div style="order: 1">4</div>      <!--      1번째 순서로 '4'를 나타내라 -->
+        </div>
+        
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <h3>flex-grow 사용</h3>
+        <div class="flex-container grow">
+            <div style="flex-grow: 0;">1</div>
+            <div style="flex-grow: 1;">2</div>
+            <div style="flex-grow: 5;">3</div>        <!--       5배는 더 커짐. 화면따라 커지는 속도도 5배 -->
+        </div>
+    </div>
+    
+    <br><hr><br>
+
+    <div id="div03">
+        <h3>flex-shrink 사용</h3>
+        <div class="flex-container shrink">
+            <div>1</div>
+            <div>2</div>
+            <div style="flex-shrink: 0;">3</div>        <!--       다른값에 속성을 안넣고 애만 0으로 값을 줬을 경우 3번만 화면을 줄였을때 형태가 고정 -->
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+
+        </div>
+    </div>
+
+    <div id="div04">
+        <h3>flex-basis 사용</h3>
+        <div class="flex-container basis">
+            <div>1</div>
+            <div style="flex-basis: 200px;">2</div>   <!--               200px로 고정됨 -->
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div05">
+        <h3>flex 사용</h3>
+        <div class="flex-container flex">
+            <div>1</div>
+            <div>2</div>
+            <div style="flex: 0 0 200px;">3</div>    <!--  위 3개의 속성을 한번에 설정 -->
+            <div>4</div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div06">
+        <h3>align-self 사용</h3>
+        <div class="flex-container self">
+            <div>1</div>
+            <div style="align-self:flex-start">2</div>    
+            <div style="align-self:center">3</div>       <!--    하위 div에 전부 적용시킨 justify-content, align-content와 달리 self는 각각의 속성을 적용시킬수 있음. -->
+            <div style="align-self:flex-end">4</div>
+            <div>5</div>
+        </div>
+    </div>
+
+
+</body>
+</html>

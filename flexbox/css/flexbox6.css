@@ -1,0 +1,111 @@
+
+
+/* flex box를 사용하여 만드러진 현재 사이트를 float를 사용하는 방식으로 하여 작성하세요 */
+
+* {
+    box-sizing: border-box;          /*    flex와 무관하게 설정해줘야하는것 */
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    padding: 60px;
+    text-align: center;
+    background-color: lavender;
+    color:green;
+}
+
+nav {
+    background-color: gray;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+    background-color: gray;
+    list-style: none;
+}
+
+nav li {
+    float: left;           /*      float 일 경우 li에 float을 걸어야함 */
+}
+
+nav li > a {
+    display: block;           /*           float로 가로정렬되었으니 padding 값을 같이 적용시켜줘야함  */
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+nav li > a:hover {
+    background-color: lightslategray;
+    color: white;
+}
+
+ul::after {                  /*       ul에서 풀어주기 */
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 
+main {
+    display: flex;             ★ 메인 컨텐츠인 사이드바와 메인내용을 가로로 정렬하기위해 상위 태그에 flex 적용. 그리고 사이드바와 메인 컨텐츠에 영역크기를 설정하면됨 
+    flex-wrap: wrap;
+} */
+
+aside {
+    background-color: #f1f1f1;
+    padding: 20px;
+    float: left;
+    width: 20%;           /*    크기를 20% 차지하게 설정 */
+}
+
+section {
+    float: left;
+    width: 80%;           /*    크기를 80% 차지하게 설정 */
+    padding: 20px;
+}
+
+.fake-img {
+    background-color: #aaaaaa;
+    width: 100%;
+    padding: 20px;
+}
+
+.photo-me {height: 200px;}
+
+.photo-link {height: 60px;}
+
+.photo-post {height: 200px;}
+
+article {
+    background-color: #a8dbd8de;
+    padding : 10px;
+    margin-bottom: 10px;
+}
+
+main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(140, 140, 211, 0.74);
+}
+
+
+@media all and (max-width: 576px) {
+    aside, section, nav li {
+        width: 100%     /*     화면이 줄어들면 세로정렬 100% 크기차지로 창이 전환됨     */
+
+        /* float 사용시 main의 자손 태그인 aside와 section의 width를 100%로 변경 */
+    }
+}

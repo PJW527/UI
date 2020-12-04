@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        header {
+
+            padding: 60px;
+            text-align: center;
+
+
+
+        }
+
+
+        body { 
+            width: 100%;
+        }
+
+        main {
+            margin: 10px;
+            padding: 10px;
+            background-color: ghostwhite;
+            
+
+
+            align-items: center;           /*          중앙위치 태그 */
+            justify-content: center;           /*          중앙위치 태그 */
+        }
+
+        section {
+            /* width: 90%;                     여기서 그림 4줄의 전체적인 영역 조절됨 */
+            display: flex;         /*      이거 없으면 가로정렬 안됨 */
+            /* flex-direction: row; */
+            align-items: center;    /*         여기서 높이차 약간 */
+            /* align-content:space-between;
+            justify-content : center; */
+            margin: 0 auto;             /*     여기서 가운데정렬됨 */
+        }
+
+        article {
+            /* align-items: center;
+            flex-direction: column;
+            align-content:space-between;
+            justify-content: space-around; */
+            background-color: ghostwhite;
+
+        }
+
+        img {
+            width: 100%;             /*        여기서 상위영역에 들어맞도록 설정 */
+            margin: 5px;
+            /* justify-content: stretch;
+            align-content:space-around; */
+        }
+
+
+
+
+
+
+        @media screen and (max-width: 916px) {
+            section {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            article {
+                flex-wrap: wrap;
+                width: 50%;
+                height: 2020px;      /*    늘릴려고 일부러 넣어준거 */
+            }
+
+        }
+
+        @media screen and (max-width: 576px) {
+            article {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>test</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <img src="./images/falls2.jpg" alt="">
+                <img src="./images/mist.jpg" alt="">
+                <img src="./images/mountainskies.jpg" alt="">
+                <img src="./images/nature.jpg" alt="">
+                <img src="./images/ocean.jpg" alt="">
+                <img src="./images/paris.jpg" alt="">
+                <img src="./images/rocks.jpg" alt="">
+            </article>
+            <article>
+                <img src="./images/paris.jpg" alt="">
+                <img src="./images/rocks.jpg" alt="">
+                <img src="./images/underwater.jpg" alt="">
+                <img src="./images/wedding.jpg" alt="">
+                <img src="./images/nature.jpg" alt="">
+                <img src="./images/falls2.jpg" alt="">
+                <img src="./images/mountainskies.jpg" alt="">
+            </article>
+            <article>
+                <img src="./images/falls2.jpg" alt="">
+                <img src="./images/mist.jpg" alt="">
+                <img src="./images/mountainskies.jpg" alt="">
+                <img src="./images/nature.jpg" alt="">
+                <img src="./images/ocean.jpg" alt="">
+                <img src="./images/paris.jpg" alt="">
+                <img src="./images/rocks.jpg" alt="">
+            </article>
+            <article>
+                <img src="./images/paris.jpg" alt="">
+                <img src="./images/rocks.jpg" alt="">
+                <img src="./images/underwater.jpg" alt="">
+                <img src="./images/wedding.jpg" alt="">
+                <img src="./images/nature.jpg" alt="">
+                <img src="./images/falls2.jpg" alt="">
+                <img src="./images/mountainskies.jpg" alt="">
+            </article>
+        </section>
+    </main>
+</body>
+</html>
